@@ -1,0 +1,39 @@
+label{
+    display: block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    
+}
+input {
+  display: block;
+  float: left;
+  
+}
+
+header{
+    background-color:lightblue;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+
+h2 {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+
+}
+
+#deletebutton {
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-weight: bold;
+}
+
+
+#submitbutton {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: green;
+    color: white;
+}
