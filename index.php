@@ -22,9 +22,9 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
 
 <main>
     <header>
-        <h1> My To Do List </h1>
+        <h1> ALIX </h1>
     </header>
-    <?php if (!$newitem && !$newdesc) { ?>
+    <!-- <?php if (!$newitem && !$newdesc) { ?> -->
     <section id="addItems">
         <h2> Add Items</h2>
         <form id ="submitform" action="<?php echo $_SERVER['PHP_SELF'] ?>" method ="POST">
@@ -35,7 +35,7 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
             <button id="submitbutton" type="submit"> Add </button>
         </form>
     </section>
-    <?php }?> 
+    <!-- <?php }?>  -->
         <hr>
 
     <?php
@@ -56,8 +56,8 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
                 
             $query = 'SELECT * FROM todoitems';
                 $statement = $db->prepare($query);
-                $statement->bindValue(':newitem',$newitem);
-                $statement->bindValue(':newdesc', $newdesc);
+                // $statement->bindValue(':newitem',$newitem);
+                // $statement->bindValue(':newdesc', $newdesc);
                 $statement->execute();
                 $results = $statement->fetchAll();
                 $statement->closecursor(); 
