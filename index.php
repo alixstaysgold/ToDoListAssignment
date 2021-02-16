@@ -22,7 +22,7 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
 
 <main>
     <header>
-        <h1> ALIX </h1>
+        <h1> To Do List </h1>
     </header>
     <!-- <?php if (!$newitem && !$newdesc) { ?> -->
     <section id="addItems">
