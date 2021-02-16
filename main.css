@@ -1,21 +1,55 @@
-label{
-    display: block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
+
+@media only screen and (min-width: 600px){
+    main {
+        max-width: 60%;
+    }
+}
+@media only screen and (min-width: 1000px){
+    main {
+        max-width: 40%;
+    }
+}
+
+body {
+    background-image:url('color.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size:auto;
+    background-repeat: no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: lightgray;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    opacity: .8;
+    
     
 }
+
+label{
+    display: block;
+    justify-content: left;
+    margin-left:25px;
+    margin:auto;
+    padding-left:25px;
+    
+    }
+
 input {
-  display: block;
-  float: left;
+width:50%;
+margin-left:25px;
   
 }
 
 header{
-    background-color:lightblue;
+    background-color:lightslategray;
     font-family:Arial, Helvetica, sans-serif;
     text-align:center;
+    padding:10px;
+    border-radius: 10px;
 }
 
 h2 {
@@ -24,11 +58,18 @@ h2 {
 
 }
 
+#additems {
+    display:flex;
+    justify-content: space-between;
+}
+
 #deletebutton {
     background-color: red;
     font-family: Arial, Helvetica, sans-serif;
     color:white;
     font-weight: bold;
+    margin-right:10px;
+    
 }
 
 
@@ -36,4 +77,26 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: green;
     color: white;
+    font-size:larger;
 }
+
+#results {
+    /* justify-content: space-between;
+    text-align: center;
+    display:flex; */
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left:10px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;    
+    grid-template-rows: 1fr;  
+    grid-template-areas:
+            "areaTitle/descr   areaButton" ;
+}
+
+    min-height: 300px;
+    max-height: 400px;
+    overflow: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    }

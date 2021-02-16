@@ -23,16 +23,16 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
 <main>
     <header>
         <h1> To Do List </h1>
-    </header>
+    </header><br>
     <!-- <?php if (!$newitem && !$newdesc) { ?> -->
     <section id="addItems">
         <h2> Add Items</h2>
         <form id ="submitform" action="<?php echo $_SERVER['PHP_SELF'] ?>" method ="POST">
             <label for="newitem">New Item:</label>
-            <input type="text" id="newitem" name="newitem" required><br>
+            <input type="text" id="newitem" name="newitem"  required><br>
             <label for="newdesc">Description:</label>
             <input type="text" id="newdesc" name="newdesc" required>
-            <button id="submitbutton" type="submit"> Add </button>
+            <button id="submitbutton" type="submit"> + </button>
         </form>
     </section>
     <!-- <?php }?>  -->
@@ -63,15 +63,13 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
                 $statement->closecursor(); 
                 
                 
-            if (!$results) {
-                echo "Nothing in List";
-            }    
+              
                 ?>
               
            
-            
-                <section>
-                <h2> Items To Do </h2>
+              <h2> Items To Do </h2><br>
+                <section id="results">
+                
                 <?php foreach ($results as $result) : ?>
                 
                 <tr>
@@ -80,12 +78,16 @@ $newdesc = filter_input(INPUT_POST, "newdesc", FILTER_SANITIZE_STRING);
                 </tr>
                 <form class="delete" action="delete.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $result['ItemNum'] ?>">
-                <button id ="deletebutton" type="deletebutton">Remove</button><br><br>
+                <button style="float:right" id ="deletebutton" type="deletebutton">X</button><br><br>
                 </form>
 
                 
                 <?php endforeach; ?>
                 </section>
+
+                <?php if (!$results) {
+                echo "Nothing in List";
+            }  ?>
             
     
     
