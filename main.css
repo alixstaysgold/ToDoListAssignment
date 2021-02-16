@@ -34,7 +34,7 @@ label{
     justify-content: left;
     margin-left:25px;
     margin:auto;
-    padding-left:25px;
+    padding-left:25px;  
     
     }
 
@@ -64,9 +64,9 @@ h2 {
 }
 
 #deletebutton {
-    background-color: red;
+    background-color: lightsalmon;
     font-family: Arial, Helvetica, sans-serif;
-    color:white;
+    color:black;
     font-weight: bold;
     margin-right:10px;
     
@@ -75,8 +75,8 @@ h2 {
 
 #submitbutton {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: green;
-    color: white;
+    background-color: lightgreen;
+    color:black;
     font-size:larger;
 }
 
@@ -93,10 +93,3 @@ h2 {
             "areaTitle/descr   areaButton" ;
 }
 
-    min-height: 300px;
-    max-height: 400px;
-    overflow: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    }
